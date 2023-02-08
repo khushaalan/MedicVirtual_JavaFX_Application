@@ -22,6 +22,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Interfaces
 ![interface_1](https://github.com/khushaalan/MedicVirtual-JavaFX-Application/blob/master/screenshots/interface1.png)
+![interface_2](https://github.com/khushaalan/MedicVirtual-JavaFX-Application/blob/master/screenshots/interface2.png)
+![interface_3](https://github.com/khushaalan/MedicVirtual-JavaFX-Application/blob/master/screenshots/interface3.png)
+![interface_4](https://github.com/khushaalan/MedicVirtual-JavaFX-Application/blob/master/screenshots/interface4.png)
+![interface_5](https://github.com/khushaalan/MedicVirtual-JavaFX-Application/blob/master/screenshots/interface5.png)
 
 
 ### Domain Model
