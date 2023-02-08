@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 - **Java 11 or higher**
 - **Scene Builder**
-- **Any JavaFX compatible IDE**
+- **Any JavaFX compatible IDE preferably Intellij**
 
 ### Installing
 
