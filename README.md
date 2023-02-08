@@ -56,7 +56,7 @@ Feel free to submit a pull request if you have any improvements or bug fixes.
 
 ## Authors
 
-- [Your Name](https://github.com/khushaalan)
+- [khushaalan](https://github.com/khushaalan)
 
 ## License
 
