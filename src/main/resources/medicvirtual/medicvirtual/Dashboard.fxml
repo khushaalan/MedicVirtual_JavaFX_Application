@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panel_root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="787.0" style="-fx-background-color: indigo; visibility: true;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medicvirtual.medicvirtual.MedicVirtualController">
+   <children>
+      <Pane fx:id="panel_signin" prefHeight="480.0" prefWidth="787.0" style="-fx-background-color: #071124; visibility: true;">
+         <children>
+            <Pane fx:id="panel_signin_region" layoutX="210.0" layoutY="43.0" prefHeight="394.0" prefWidth="371.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 50px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+               <children>
+                  <Label fx:id="lbl_title_signin" layoutX="97.0" layoutY="130.0" text="Welcome to MedicVirtual">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_userid_signin" alignment="CENTER" layoutX="75.0" layoutY="185.0" prefHeight="25.0" prefWidth="216.0" promptText="User ID" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="khushaalan">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btn_signin_signin" contentDisplay="CENTER" layoutX="190.0" layoutY="270.0" mnemonicParsing="false" onAction="#login_clicked" prefHeight="28.0" prefWidth="101.0" style="-fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="SIGN IN" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="8.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="pic_user_icon" fitHeight="19.0" fitWidth="17.0" layoutX="88.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="pic_logo_signin" fitHeight="81.0" fitWidth="109.0" layoutX="145.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="lbl_warning_signin" layoutX="31.0" layoutY="330.0" prefHeight="40.0" prefWidth="308.0" text="Please enter your userID and password" textFill="RED" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txt_password_signin" alignment="CENTER" layoutX="75.0" layoutY="226.0" prefHeight="27.0" prefWidth="216.0" promptText="Password" style="-fx-background-color: antiquewhite; -fx-border-color: black; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="khushaalan">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </PasswordField>
+                  <ImageView fx:id="pic_password_icon" fitHeight="20.0" fitWidth="23.0" layoutX="87.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btn_create_account_signin" layoutX="75.0" layoutY="270.0" mnemonicParsing="false" onAction="#create_account_clicked" prefHeight="28.0" prefWidth="101.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="CREATE ACCOUNT">
+                     <font>
+                        <Font name="Monospaced Bold" size="8.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="panel_signup" prefHeight="480.0" prefWidth="787.0" style="-fx-background-color: #071124; visibility: false;">
+         <children>
+            <Pane fx:id="panel_signup_right" layoutX="247.0" layoutY="21.0" prefHeight="438.0" prefWidth="360.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0); visibility: false;">
+               <children>
+                  <Button fx:id="btn_create_account_signup" layoutX="20.0" layoutY="386.0" mnemonicParsing="false" onAction="#create_account_clicked_signup" prefHeight="28.0" prefWidth="323.0" style="-fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="CREATE ACCOUNT" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="lbl_userid_signup" layoutX="20.0" layoutY="21.0" text="USERNAME">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_password_signup" layoutX="20.0" layoutY="57.0" text="PASSWORD">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_full_name_signup" layoutX="20.0" layoutY="92.0" text="FULL NAME">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_id_signup" layoutX="20.0" layoutY="128.0" text="ID">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_address_signup" layoutX="20.0" layoutY="198.0" text="ADDRESS">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_gender_signup" layoutX="20.0" layoutY="233.0" text="GENDER">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_weight_signup" layoutX="20.0" layoutY="267.0" text="WEIGHT">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_height_signup" layoutX="20.0" layoutY="305.0" text="HEIGHT">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_age_signup" layoutX="20.0" layoutY="342.0" text="AGE">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_phone_signup" layoutX="20.0" layoutY="162.0" text="PHONE">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_userid_signup" alignment="CENTER" layoutX="120.0" layoutY="16.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your UserName" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_password_signup" alignment="CENTER" layoutX="120.0" layoutY="52.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your Password" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_full_name_signup" alignment="CENTER" layoutX="120.0" layoutY="87.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your Full Name" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_id_signup" alignment="CENTER" layoutX="120.0" layoutY="123.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your I.C Number" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_phone_signup" alignment="CENTER" layoutX="120.0" layoutY="157.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your Phone" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_address_signup" alignment="CENTER" layoutX="120.0" layoutY="193.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your Address" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_gender_signup" alignment="CENTER" editable="false" layoutX="120.0" layoutY="228.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your Gender" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" visible="false">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_weight_signup" alignment="CENTER" layoutX="120.0" layoutY="262.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your Weight" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_height_signup" alignment="CENTER" layoutX="120.0" layoutY="300.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your Height" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_age_signup" alignment="CENTER" layoutX="120.0" layoutY="337.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your Age" style="-fx-border-radius: 15px; -fx-border-color: black; -fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="cmb_gender_signup" layoutX="120.0" layoutY="228.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-border-color: black; -fx-border-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" />
+               </children>
+            </Pane>
+            <Pane fx:id="panel_signup_left" layoutX="247.0" layoutY="21.0" prefHeight="438.0" prefWidth="360.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0); visibility: false;">
+               <children>
+                  <ImageView fx:id="pic_profile_signup" fitHeight="273.0" fitWidth="254.0" layoutX="57.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btn_select_pic_signup" layoutX="18.0" layoutY="366.0" mnemonicParsing="false" onAction="#signup_upload_picture" prefHeight="28.0" prefWidth="331.0" style="-fx-background-color: RED; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="SELECT A PICTURE" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="panel_sidebar" prefHeight="480.0" prefWidth="200.0" style="-fx-background-color: #071124; visibility: false;">
+         <children>
+            <Button fx:id="btn_view_profile_sidebar" layoutY="240.0" mnemonicParsing="false" onAction="#view_profile" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0c182f;" text="View Profile" textFill="#d9dde2">
+               <font>
+                  <Font name="Monospaced Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_book_appointment_sidebar" layoutY="279.0" mnemonicParsing="false" onAction="#book_appointment" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0c182f;" text="Book Appointment" textFill="#d9dde2">
+               <font>
+                  <Font name="Monospaced Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_buy_medical_supplies_sidebar" layoutY="319.0" mnemonicParsing="false" onAction="#buy_medical_supplies" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0c182f;" text="Buy Medical Supplies" textFill="#d9dde2">
+               <font>
+                  <Font name="Monospaced Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_read_medical_news_sidebar" layoutY="359.0" mnemonicParsing="false" onAction="#read_medical_news" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0c182f;" text="Read Medical News" textFill="#d9dde2">
+               <font>
+                  <Font name="Monospaced Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_monitor_fitness_and_health_sidebar" layoutY="399.0" mnemonicParsing="false" onAction="#monitor_fitness_and_health" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0c182f;" text="Monitor Fitness and Health" textFill="#d9dde2">
+               <font>
+                  <Font name="Monospaced Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_signout_sidebar" layoutX="1.0" layoutY="439.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0c182f;" text="Sign Out" textFill="#d9dde2">
+               <font>
+                  <Font name="Monospaced Bold" size="10.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="pic_logo_sidebar" fitHeight="142.0" fitWidth="145.0" layoutX="35.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="lbl_title_sidebar" layoutX="47.0" layoutY="22.0" text="MedicVirtual" textFill="#d9dde2">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="panel_content" layoutX="200.0" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: black; visibility: false;">
+         <children>
+            <Pane fx:id="panel_dashboard" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: #0c182f; visibility: false;">
+               <children>
+                  <Label fx:id="lbl_title_dashboard" layoutX="115.0" layoutY="60.0" text="Welcome to MedicVirtual" textFill="#d9dde2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_description_dashboard" layoutX="140.0" layoutY="106.0" prefHeight="57.0" prefWidth="323.0" text="The Leading Medical Appointment Booking System" textAlignment="CENTER" textFill="#d9dde2" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="pic_splashscreen_dashboard" fitHeight="302.0" fitWidth="399.0" layoutX="102.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="panel_view_profile" nodeOrientation="LEFT_TO_RIGHT" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: #0c182f; visibility: false;">
+               <children>
+                  <Pane fx:id="panel_profile_info" layoutX="203.0" layoutY="21.0" prefHeight="438.0" prefWidth="371.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px;">
+                     <children>
+                        <Label fx:id="lbl_full_name_view_profile" layoutX="22.0" layoutY="49.0" text="Name" textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_id_view_profile" layoutX="22.0" layoutY="90.0" text="I.D Number" textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_phone_view_profile" layoutX="22.0" layoutY="122.0" text="Phone" textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_address_view_profile" layoutX="22.0" layoutY="149.0" text="Address" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_gender_view_profile" layoutX="22.0" layoutY="214.0" text="Gender" textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_weight_view_profile" layoutX="22.0" layoutY="252.0" prefHeight="20.0" prefWidth="59.0" text="Weight" textAlignment="CENTER" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_height_view_profile" layoutX="22.0" layoutY="289.0" prefHeight="23.0" prefWidth="65.0" text="Height" textAlignment="CENTER" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_age_view_profile" layoutX="22.0" layoutY="328.0" prefHeight="20.0" prefWidth="50.0" text="Age" textAlignment="CENTER" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_colon5" layoutX="120.0" layoutY="49.0" prefHeight="25.0" prefWidth="17.0" text=":" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_colon4" layoutX="120.0" layoutY="86.0" prefHeight="25.0" prefWidth="17.0" text=":" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_colon3" layoutX="120.0" layoutY="118.0" prefHeight="25.0" prefWidth="17.0" text=":" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_colon2" layoutX="120.0" layoutY="149.0" prefHeight="25.0" prefWidth="17.0" text=":" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_colon1" layoutX="120.0" layoutY="214.0" prefHeight="25.0" prefWidth="17.0" text=":" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_colon" layoutX="120.0" layoutY="252.0" prefHeight="25.0" prefWidth="17.0" text=":" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_colon6" layoutX="120.0" layoutY="289.0" prefHeight="25.0" prefWidth="17.0" text=":" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_colon61" layoutX="120.0" layoutY="328.0" prefHeight="25.0" prefWidth="17.0" text=":" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_weight_view_profile" alignment="CENTER" layoutX="145.0" layoutY="252.0" prefHeight="25.0" prefWidth="131.0" promptText="Enter your weight" style="-fx-background-color: white; -fx-background-radius: 15px;" text="0.0">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txt_height_view_profile" alignment="CENTER" layoutX="145.0" layoutY="289.0" prefHeight="25.0" prefWidth="131.0" promptText="Enter your height" style="-fx-background-color: white; -fx-background-radius: 15px;" text="0.0">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="lbl_kg_view_profile" layoutX="291.0" layoutY="252.0" text="kg" textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_cm_view_profile" layoutX="291.0" layoutY="289.0" text="cm" textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_years_view_profile" layoutX="288.0" layoutY="328.0" text="years old" textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cmb_gender_view_profile" disable="true" layoutX="144.0" layoutY="214.0" prefHeight="25.0" prefWidth="216.0" promptText="Select your Gender" style="-fx-background-color: white; -fx-background-radius: 15px;" />
+                        <TextArea fx:id="txt_address_view_profile" layoutX="144.0" layoutY="149.0" prefHeight="57.0" prefWidth="216.0" promptText="Enter your Address" text="No.12, Taman Melor, 09000 Kulim, Kedah" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font></TextArea>
+                        <TextField fx:id="txt_phone_view_profile" alignment="CENTER" layoutX="144.0" layoutY="118.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your phone" style="-fx-background-color: white; -fx-background-radius: 15px;" text="01130591377">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txt_id_view_profile" alignment="CENTER" layoutX="144.0" layoutY="86.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your IC Number" style="-fx-background-color: white; -fx-background-radius: 15px;" text="000912070457">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txt_full_name_view_profile" alignment="CENTER" layoutX="144.0" layoutY="49.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your Full Name" style="-fx-background-color: white; -fx-background-radius: 15px;" text="Khushaalan Arjunan">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txt_age_view_profile" alignment="CENTER" layoutX="145.0" layoutY="328.0" prefHeight="25.0" prefWidth="131.0" promptText="Enter your age" style="-fx-background-color: white; -fx-background-radius: 15px;" text="0">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btn_save_view_profile" layoutX="22.0" layoutY="388.0" mnemonicParsing="false" onAction="#save_profile_info" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="SAVE" textFill="WHITE">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_clear_view_profile" layoutX="212.0" layoutY="388.0" mnemonicParsing="false" onAction="#clear_profile_info" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="CLEAR" textFill="WHITE">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="pic_profile_view_profile" fitHeight="125.0" fitWidth="132.0" layoutX="50.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btn_select_picture_view_profile" layoutX="66.0" layoutY="211.0" mnemonicParsing="false" onAction="#select_a_picture" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="SELECT A PICTURE" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="8.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="lbl_warning_view_profile" layoutX="22.0" layoutY="322.0" prefHeight="37.0" prefWidth="159.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Bold" size="8.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="panel_book_appointment" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: #0c182f; visibility: false;">
+               <children>
+                  <Pane layoutX="251.0" layoutY="88.0" prefHeight="294.0" prefWidth="308.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px;">
+                     <children>
+                        <Button fx:id="btn_clear_book_appointment" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="231.0" mnemonicParsing="false" onAction="#clear_book_appointment_info" prefHeight="25.0" prefWidth="261.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="CLEAR FORM" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_book_appointment_book_appointment" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="193.0" mnemonicParsing="false" onAction="#book_appointment_submit" prefHeight="25.0" prefWidth="261.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="BOOK APPOINTMENT" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <DatePicker fx:id="dp_date_book_appointment" layoutX="26.0" layoutY="127.0" onAction="#date_picker_event" prefHeight="25.0" prefWidth="261.0" style="-fx-background-color: antiquewhite;" />
+                        <Label fx:id="lbl_date_book_appointment" layoutX="59.0" layoutY="105.0" text="Pick your Appointment Date " textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_slots_book_appointment" layoutX="59.0" layoutY="39.0" text="Pick your Appointment Slot" textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cmb_slots_book_appointment" layoutX="26.0" layoutY="62.0" onAction="#slot_selection_event" prefHeight="25.0" prefWidth="261.0" style="-fx-background-color: white; -fx-background-radius: 15px;" />
+                     </children>
+                  </Pane>
+                  <ComboBox fx:id="cmb_doctors_book_appointment" layoutX="45.0" layoutY="45.0" onAction="#doctor_selection_event" prefHeight="25.0" prefWidth="490.0" promptText="Select your Preferred Doctor:" style="-fx-background-color: white; -fx-background-radius: 15px;" />
+                  <Label fx:id="lbl_timeinfo_book_appointment" layoutX="54.0" layoutY="346.0" prefHeight="40.0" prefWidth="101.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_alert_book_appointment" layoutX="63.0" layoutY="385.0" prefHeight="97.0" prefWidth="462.0" text="Please select your preferred doctor, appointment slot and date" textFill="#03989e" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="pic_doctor_book_appointment" fitHeight="135.0" fitWidth="194.0" layoutX="31.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="lbl_dateinfo_book_appointment" layoutX="135.0" layoutY="346.0" prefHeight="37.0" prefWidth="101.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_hospital_name_book_appointment" contentDisplay="CENTER" layoutX="50.0" layoutY="255.0" prefHeight="73.0" prefWidth="187.0" text="Hospital Name" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="panel_buy_medical_supplies" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: #0c182f; visibility: false;">
+               <children>
+                  <Pane fx:id="panel_product_catalogue" layoutX="27.0" layoutY="76.0" prefHeight="329.0" prefWidth="360.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px;">
+                     <children>
+                        <ImageView fx:id="pic_product_buy_medical_supplies" fitHeight="112.0" fitWidth="109.0" layoutX="33.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Berocca%20Sachet%202sx12.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lbl_product_name_buy_medical_supplies" layoutX="14.0" layoutY="132.0" prefHeight="66.0" prefWidth="331.0" text="PRODUCT NAME" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_addtocart_buy_medical_supplies" layoutX="245.0" layoutY="84.0" mnemonicParsing="false" onAction="#add_to_cart" prefHeight="23.0" prefWidth="101.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="Add to Cart" textFill="WHITE">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lbl_rating_buy_medical_supplies" layoutX="21.0" layoutY="188.0" prefHeight="4.0" prefWidth="159.0" text="*****/*****" textFill="#d4af37">
+                           <font>
+                              <Font name="Monospaced Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_price_buy_medical_supplies" layoutX="14.0" layoutY="208.0" text="RM 00.00" textFill="RED">
+                           <font>
+                              <Font name="Monospaced Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_quantity_buy_medical_supplies" layoutX="14.0" layoutY="253.0" text="Quantity" textFill="#0c182f">
+                           <font>
+                              <Font name="Monospaced Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_quantity_buy_medical_supplies" alignment="CENTER" layoutX="122.0" layoutY="252.0" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #09152a; -fx-background-radius: 15px; -fx-text-fill: white;" text="1">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="lbl_stock_buy_medical_supplies" layoutX="133.0" layoutY="286.0" text="22 in stock" textFill="RED">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button fx:id="btn_checkout_buy_medical_supplies" layoutX="50.0" layoutY="432.0" mnemonicParsing="false" onAction="#proceed_to_checkout" prefHeight="25.0" prefWidth="511.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="Proceed to Checkout" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="cmb_products_buy_medical_supplies" layoutX="60.0" layoutY="29.0" onAction="#update_panel" prefHeight="27.0" prefWidth="416.0" promptText="Select your Product" style="-fx-background-color: white; -fx-background-radius: 50px;" />
+                  <ListView fx:id="lst_cart" layoutX="407.0" layoutY="73.0" prefHeight="335.0" prefWidth="154.0" style="-fx-background-color: white; -fx-background-radius: 15px;" />
+               </children></Pane>
+            <Pane fx:id="panel_checkout" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: #0c182f; visibility: false;">
+               <children>
+                  <Pane fx:id="panel_delivery" layoutX="96.0" layoutY="88.0" prefHeight="356.0" prefWidth="416.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px; visibility: false;">
+                     <children>
+                        <Label fx:id="lbl_delivery_address_checkout" layoutX="54.0" layoutY="36.0" prefHeight="73.0" prefWidth="308.0" text="Please do fill in your Shipping Address before proceed to payment" textAlignment="CENTER" textFill="#7e9abc" wrapText="true">
+                           <font>
+                              <Font name="Segoe UI Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_proceed_delivery" alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="297.0" mnemonicParsing="false" onAction="#save_delivery_info" prefHeight="25.0" prefWidth="261.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="PROCEED TO PAYMENT" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="txt_shipping_address" layoutX="35.0" layoutY="133.0" prefHeight="90.0" prefWidth="348.0" promptText="Enter your Shipping Address here">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </Pane>
+                  <Line fx:id="line_1" endX="37.999969482421875" endY="1.0000038146972656" fill="WHITE" layoutX="256.0" layoutY="49.0" startX="-101.00003051757812" startY="1.0000038146972656" stroke="WHITE" strokeWidth="2.0" />
+                  <Line fx:id="line_2" endX="37.999969482421875" endY="1.0000038146972656" fill="WHITE" layoutX="396.0" layoutY="48.0" startX="-101.00003051757812" startY="1.0000038146972656" stroke="WHITE" strokeWidth="2.0" />
+                  <Circle fx:id="circle_delivery" fill="WHITE" layoutX="155.0" layoutY="50.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="circle_payment" fill="WHITE" layoutX="294.0" layoutY="50.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="circle_complete" fill="WHITE" layoutX="433.0" layoutY="50.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Pane fx:id="panel_payment" layoutX="96.0" layoutY="88.0" prefHeight="356.0" prefWidth="416.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px; visibility: false;">
+                     <children>
+                        <Button fx:id="btn_proceed_payment" alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="297.0" mnemonicParsing="false" onAction="#save_payment_info" prefHeight="25.0" prefWidth="254.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="APPROVE PAYMENT" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lbl_payment_method_checkout" layoutX="43.0" layoutY="14.0" prefHeight="59.0" prefWidth="331.0" text="Please do fill in your payment details to proceed" textAlignment="CENTER" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Segoe UI Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="pic_visa_card" fitHeight="97.0" fitWidth="141.0" layoutX="14.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+                        <Pane fx:id="panel_card" layoutX="148.0" layoutY="84.0" prefHeight="188.0" prefWidth="254.0" style="-fx-background-color: #7e9abc;">
+                           <children>
+                              <TextField fx:id="txt_card_number" alignment="CENTER" layoutX="15.0" layoutY="61.0" prefHeight="25.0" prefWidth="225.0" promptText="CARD NUMBER" />
+                              <TextField fx:id="txt_cardholder_name" alignment="CENTER" layoutX="15.0" layoutY="104.0" prefHeight="25.0" prefWidth="225.0" promptText="CARDHOLDER NAME" />
+                              <TextField fx:id="txt_expiry_month" alignment="CENTER" layoutX="15.0" layoutY="144.0" prefHeight="25.0" prefWidth="50.0" promptText="MM" />
+                              <TextField fx:id="txt_expiry_year" alignment="CENTER" layoutX="74.0" layoutY="144.0" prefHeight="25.0" prefWidth="65.0" promptText="YYYY" />
+                              <TextField fx:id="txt_cvv" alignment="CENTER" layoutX="161.0" layoutY="144.0" prefHeight="25.0" prefWidth="79.0" promptText="CVV" />
+                              <Label fx:id="lbl_payment_method_checkout1" layoutX="15.0" layoutY="31.0" prefHeight="23.0" prefWidth="125.0" text="Payment Details" textAlignment="CENTER" textFill="#0c182f" wrapText="true">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label fx:id="lbl_total_checkout" alignment="CENTER" layoutX="20.0" layoutY="243.0" prefHeight="73.0" prefWidth="79.0" text="Total" textAlignment="CENTER" textFill="#0c182f" wrapText="true">
+                           <font>
+                              <Font name="Segoe UI Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="panel_checkout_complete" layoutX="96.0" layoutY="88.0" prefHeight="356.0" prefWidth="416.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px; visibility: false;">
+                     <children>
+                        <Label fx:id="lbl_checkout_summary_title" layoutX="39.0" layoutY="32.0" prefHeight="24.0" prefWidth="245.0" text="Payment Successful" textFill="#0c182f">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_return_checkout" alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="297.0" mnemonicParsing="false" onAction="#return_to_buy_medical_supplies" prefHeight="25.0" prefWidth="261.0" style="-fx-background-color: red; -fx-border-color: red; -fx-border-radius: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="RETURN TO MAIN MENU" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lbl_checkout_summary_description" layoutX="39.0" layoutY="56.0" prefHeight="24.0" prefWidth="245.0" text="Thank you for choosing MedicVirtual" textFill="#0c182f">
+                           <font>
+                              <Font name="Segoe UI" size="10.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="pic_payment_successful" fitHeight="188.0" fitWidth="245.0" layoutX="86.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="panel_read_medical_news" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: #0c182f; visibility: false;">
+               <children>
+                  <ImageView fx:id="pic_news_read_medical_news" fitHeight="228.0" fitWidth="588.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btn_news2_read_medical_news" layoutX="304.0" layoutY="285.0" mnemonicParsing="false" onAction="#news2_open_page" prefHeight="66.0" prefWidth="261.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 25px;" text="Stress Tolerance influences Suicide Risk and Can be Modified" textFill="#4f2626" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <Label fx:id="lbl_news1_read_medical_news" text="NEWS" textFill="#03989e">
+                           <font>
+                              <Font name="Monospaced Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_news3_read_medical_news" layoutX="23.0" layoutY="381.0" mnemonicParsing="false" onAction="#news3_open_page" prefHeight="66.0" prefWidth="261.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 25px;" text="Covid Leading Cause if Death Among Law Enforcement for Third Year" textFill="#4f2626" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <Label fx:id="lbl_news3_read_medical_news" text="NEWS" textFill="#03989e">
+                           <font>
+                              <Font name="Monospaced Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_news4_read_medical_news" layoutX="304.0" layoutY="381.0" mnemonicParsing="false" onAction="#news4_open_page" prefHeight="66.0" prefWidth="261.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 25px;" text="Poor Oral Hygiene after stroke can after Inflammation Risk" textFill="#4f2626" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <Label fx:id="lbl_news4_read_medical_news" text="NEWS" textFill="#03989e">
+                           <font>
+                              <Font name="Monospaced Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_news1_read_medical_news" layoutX="23.0" layoutY="285.0" mnemonicParsing="false" onAction="#news1_open_page" prefHeight="66.0" prefWidth="261.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 25px;" text="Scant Evidence for Proton Pumo Inhibitor Role in Gastric Cancer" textFill="#4f2626" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <Label fx:id="lbl_news2_read_medical_news" text="NEWS" textFill="#03989e">
+                           <font>
+                              <Font name="Monospaced Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="333.0" layoutY="361.0" text="Medical News | January 12, 2023" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="335.0" layoutY="260.0" text="Medical News | January 3, 2023" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="361.0" text="Medical News | December 18, 2022" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="265.0" text="Medical News | November 15, 2022" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="10.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="panel_news1" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: antiquewhite; visibility: false;">
+               <children>
+                  <Label fx:id="lbl_title_news1" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="14.0" prefHeight="81.0" prefWidth="536.0" text="NEWS 1" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txt_description_news1" editable="false" layoutX="19.0" layoutY="105.0" prefHeight="311.0" prefWidth="536.0" style="-fx-background-color: black; -fx-background-radius: 15px; -fx-border-color: black; -fx-border-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="btn_back_news1" layoutX="479.0" layoutY="429.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: red; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="Back">
+                     <font>
+                        <Font name="Monospaced Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="panel_news2" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: antiquewhite; visibility: false;">
+               <children>
+                  <Label fx:id="lbl_title_news2" alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="14.0" prefHeight="81.0" prefWidth="550.0" text="NEWS 2" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txt_description_news2" editable="false" layoutX="14.0" layoutY="102.0" prefHeight="311.0" prefWidth="550.0" style="-fx-background-color: black; -fx-background-radius: 15px; -fx-border-color: black; -fx-border-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="btn_back_news2" layoutX="488.0" layoutY="429.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: red; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="Back">
+                     <font>
+                        <Font name="Monospaced Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="panel_news3" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: antiquewhite; visibility: false;">
+               <children>
+                  <Label fx:id="lbl_title_news3" alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="14.0" prefHeight="90.0" prefWidth="550.0" text="NEWS 3" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txt_description_news3" editable="false" layoutX="11.0" layoutY="110.0" prefHeight="311.0" prefWidth="550.0" style="-fx-background-color: black; -fx-background-radius: 15px; -fx-border-color: black; -fx-border-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="btn_back_news3" layoutX="485.0" layoutY="429.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: red; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="Back">
+                     <font>
+                        <Font name="Monospaced Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="panel_news4" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: antiquewhite; visibility: false;">
+               <children>
+                  <Label fx:id="lbl_title_news4" alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="73.0" prefWidth="550.0" text="NEWS 4" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txt_description_news4" editable="false" layoutX="16.0" layoutY="91.0" prefHeight="318.0" prefWidth="550.0" style="-fx-background-color: black; -fx-background-radius: 15px; -fx-border-color: black; -fx-border-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="btn_back_news4" layoutX="490.0" layoutY="419.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: red; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" text="Back">
+                     <font>
+                        <Font name="Monospaced Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="panel_monitor_fitness_and_health" layoutX="6.0" prefHeight="480.0" prefWidth="588.0" style="-fx-background-color: #0c182f; visibility: false;">
+               <children>
+                  <Pane layoutX="104.0" layoutY="43.0" prefHeight="394.0" prefWidth="380.0" style="-fx-background-color: antiquewhite; -fx-background-radius: 15px;">
+                     <children>
+                        <Label fx:id="lbl_title_monitor_fitness_and_health" alignment="CENTER" layoutX="36.0" layoutY="24.0" prefHeight="52.0" prefWidth="308.0" text="Good Day, Name">
+                           <font>
+                              <Font name="Monospaced Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_bmi_monitor_fitness_and_health" layoutX="90.0" layoutY="104.0" text="Body Mass Index (BMI)">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_bmi_monitor_fitness_and_health" editable="false" layoutX="49.0" layoutY="127.0" prefHeight="25.0" prefWidth="234.0" />
+                        <Label fx:id="lbl_calorie_monitor_fitness_and_health" layoutX="76.0" layoutY="190.0" text="Body Metabolic Rate (BMR)">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_calorie_monitor_fitness_and_health" editable="false" layoutX="49.0" layoutY="207.0" prefHeight="25.0" prefWidth="234.0" />
+                        <Label fx:id="lbl_bmi_class_monitor_fitness_and_health" alignment="CENTER" layoutX="48.0" layoutY="244.0" prefHeight="52.0" prefWidth="283.0" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="pic_bmi_class_monitor_fitness_and_health" fitHeight="81.0" fitWidth="109.0" layoutX="95.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="lbl_bmi_monitor_fitness_and_health1" layoutX="290.0" layoutY="132.0" text="kg/m² ">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_bmi_monitor_fitness_and_health11" layoutX="291.0" layoutY="211.0" text="kcal/day">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children></Pane>
+         </children></Pane>
+   </children>
+</Pane>
